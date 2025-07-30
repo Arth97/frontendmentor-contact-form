@@ -10,6 +10,48 @@
 </head>
 <body>
   <div id="app">
+    <h1>Contact Us</h1>
+    <form id="contactForm" class="grid-form" action="submit" method="POST">
+      <div>
+        <label for="firstname">First Name<span class="aste"> *</span></label>
+        <input type="text" id="firstname" required>
+      </div>
+      <div>
+        <label for="lastname">Last Name<span class="aste"> *</span></label>
+        <input type="text" id="lastname" required>
+      </div>
+    
+      <div class="full-row">
+        <label for="email">Email Address<span class="aste"> *</span></label>
+        <input type="text" name="email" id="email" required>
+      </div>
+
+      <div class="querytype-group">
+        <label for="radio">Query Type<span class="aste"> *</span></label>
+        <div class="radio flex flex-row gap-4" id="radio">
+          <input type="radio" id="querytype1" name="querytype" value="General Enquiry" required>
+          <label for="querytype1">General Enquiry</label>
+        </div>
+      </div>
+      <div class="querytype-group">
+        <label for="radio" style="visibility:hidden;">Query Type</label>
+        <div class="radio flex flex-row gap-4" id="radio">
+          <input type="radio" id="querytype2" name="querytype" value="Support Request" required>
+          <label for="querytype2">Support Request</label>
+        </div>
+      </div>
+
+      <div class="message-content">
+        <label for="message">Message<span class="aste"> *</span></label>
+        <textarea name="message" id="message" class="message-area" required></textarea>
+      </div>
+    
+      <div class="full-row flex flex-row items-center gap-4">
+        <input type="checkbox" name="conset" id="consent" style="margin: 0;" required>
+        <p>I consent to being contacted by the team<span class="aste"> *</span></p>
+      </div>
+      <button type="submit" id="submit" class="full-row submit-button full-width">Submit</button>
+    </form>
   </div>
   <script src="main.js"></script>
 </body>
