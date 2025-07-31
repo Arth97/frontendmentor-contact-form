@@ -19,6 +19,7 @@ body {
 }
 
 #app {
+  position: relative;
 	height: 775px;
 	width: 740px;
 	display: flex;
@@ -51,10 +52,6 @@ h1 {
 
 .full-row {
   grid-column: span 2 / span 2;
-}
-
-.querytype-group {
-  grid-row-start: 3;
 }
 
 .message-content {
@@ -124,5 +121,39 @@ input[type=checkbox] {
 }
 
 @media (max-width: 640px) {
+  #app {
+    height: 880px;
+  }
 
+  .name,
+  .querytype-group,
+  .querytype-group2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .querytype-group2 {
+    margin-top: -35px;
+  }
+}
+
+
+#formMessage {
+  position: absolute;
+  top: 0;
+  transform: translateX(50%);
+  margin-top: -4rem;
+  padding: 1em;
+  border-radius: 6px;
+  font-weight: bold;
+}
+#formMessage.success {
+  background: var(--grey-900);
+  color: var(--white);
+}
+#formMessage.error {
+  background: var(--red);
+  color: var(--white);
+}
+.hidden {
+  display: none;
 }

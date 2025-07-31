@@ -1,20 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contactForm');
+  const messageDiv = document.getElementById('formMessage');
+
   form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const nombre = form.elements['firstname'].value.trim();
     const email = form.elements['email'].value.trim();
 
-    if (nombre === '' || email === '') {
-      alert('Por favor, completa todos los campos.');
+    if (name === '' || email === '') {
+      showMessage('Please fill in all the fields.', 'error');
     } else if (!validateEmail(email)) {
-      alert('Por favor, ingresa un email válido.');
+      showMessage('Please enter a valid email address.', 'error');
     } else {
-      alert('¡Formulario enviado correctamente!');
-      // form.submit();
+      showMessage(
+        `Message Sent!
+        Thanks for completing the form. We'll be in touch soon!
+        `
+        , 'success');
     }
   });
+
+  function showMessage(msg, type) {
+    messageDiv.innerHTML = msg.replace(/\n/g, '<br>');
+    messageDiv.className = '';
+    messageDiv.classList.add(type === 'success' ? 'success' : 'error');
+    messageDiv.classList.remove('hidden');
+  }
 
   function validateEmail(email) {
     return /\S+@\S+\.\S+/.test(email);

@@ -12,11 +12,11 @@
   <div id="app">
     <h1>Contact Us</h1>
     <form id="contactForm" class="grid-form" action="submit" method="POST">
-      <div>
+      <div class="name">
         <label for="firstname">First Name<span class="aste"> *</span></label>
         <input type="text" id="firstname" required>
       </div>
-      <div>
+      <div class="name">
         <label for="lastname">Last Name<span class="aste"> *</span></label>
         <input type="text" id="lastname" required>
       </div>
@@ -33,7 +33,7 @@
           <label for="querytype1">General Enquiry</label>
         </div>
       </div>
-      <div class="querytype-group">
+      <div class="querytype-group2">
         <label for="radio" style="visibility:hidden;">Query Type</label>
         <div class="radio flex flex-row gap-4" id="radio">
           <input type="radio" id="querytype2" name="querytype" value="Support Request" required>
@@ -52,6 +52,7 @@
       </div>
       <button type="submit" id="submit" class="full-row submit-button full-width">Submit</button>
     </form>
+    <div id="formMessage" class="hidden"></div>
   </div>
   <script src="main.js"></script>
 </body>
