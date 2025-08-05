@@ -1,4 +1,4 @@
-# Frontend Mentor - Blog preview card solution
+# Frontend Mentor - Contact form solution
 
 This is a solution to the [Contact form on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj).
 
