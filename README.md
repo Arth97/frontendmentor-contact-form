@@ -1,6 +1,6 @@
 # Frontend Mentor - Blog preview card solution
 
-This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj).
+This is a solution to the [Blog preview card on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj).
 
 ### Links
 
